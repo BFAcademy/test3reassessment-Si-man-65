@@ -1,13 +1,23 @@
 
 class Main {
   public static void main(String[] args) {
-    System.out.println("Hello world!");
+
+    System.out.println(isEven(50));
   }
 
   /*Exercise 1 */
   public static boolean isEven (int x)
   {
-    /* missing code */
+
+    if(x % 2 == 0)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  
   }
 
 
@@ -15,7 +25,10 @@ class Main {
   public static String triangleType(int a, int b, int c)
   {
 	   
-       /* missing code */
+      if(a == b && b == c && a == c)
+      {
+        return 
+      }
   
       
   }
