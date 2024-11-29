@@ -2,10 +2,10 @@
 class Main {
   public static void main(String[] args) {
 
-    System.out.println(triangleType(3, 4, 0));
+    System.out.println(classifyNumber(-3));
   }
 
-  /*Exercise 1 */
+  /* Exercise 1 */
   public static boolean isEven (int x) 
   {
 
@@ -80,46 +80,29 @@ class Main {
   /* Exercise 4 */
   public static boolean isLater(int month1, int day1, int year1, int month2, int day2, int year2)
   {
-
-    //Need to clean up, very complicated
-
-    Boolean checkYear;
-    Boolean checkMonth;
-    Boolean checkDay;
+    //check year
     if(year1 > year2)
     {
       return true;
     }
-    else{
-      if(year1 >= year2)
-      {
-        checkYear = true;
-      }
-      else
-      {
-        checkYear = false;
-      }
-      if(month1 >= month2)
-      {
-        checkYear = true;
-        
-      }
-      else
-      {
-
-      }
-      if(day1 > day2)
-      {
-        checkDay = true;
-      }
-      else
-      {
-        checkDay = false;
-      }
+    else if(year1 < year2)
+    {
+      return false;
     }
-  } 
+    //check month
+    if(month1 > month2)
+    {
+      return true;
+    }
+    else if(month1 < month2)
+    {
+      return false;
+    }
+    //if everything is the same except for the day so far, check day
+    return day1 > day2;
 
 
-  
+   
+  }
 
 }
